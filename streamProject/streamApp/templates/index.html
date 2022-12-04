@@ -1,0 +1,149 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--  <head>-->
+<!--    <title> Live video stream </title>-->
+<!--  </head>-->
+<!--  <body>-->
+<!--  <center>-->
+<!--    <h1> Live Video Stream </h1>-->
+
+<!--  </center>-->
+<!--  </body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 400px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  height: 400px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+<!--footer {-->
+<!--  background-color: #777;-->
+<!--  padding: 10px;-->
+<!--  text-align: center;-->
+<!--  color: white;-->
+<!--}-->
+
+.progress {
+    width: 300px;
+}
+.progress header span {
+    color: #666;
+    float: right;
+}
+.progress .bar {
+    position: relative;
+    background-color: #ccc;
+}
+.progress .bar .percent {
+    color: white;
+    background-color: #0c0;
+    width: 100%;
+}
+.progress .bar .ref {
+    position: absolute;
+    left: 80%;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: black;
+}
+.progress .bar .ref:before {
+    content: attr(data-ref);
+    position: absolute;
+    width: 80px;
+    left: -50px;
+    top: 100%;
+    color: #888;
+    text-align: center;
+}
+
+
+</style>
+   <script src=
+"https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
+          crossorigin="anonymous">
+    </script>
+</head>
+<body>
+
+<section>
+  <nav>
+      <div class="container">
+      <p>Duration time of poor posture</p>
+      <div class="progress">
+        <div class="progress-bar bg-success" style="width:10%">
+          Free Space
+        </div>
+<!--        <div class="progress-bar bg-warning" style="width:10%">-->
+<!--          Warning-->
+<!--        </div>-->
+<!--        <div class="progress-bar bg-danger" style="width:20%">-->
+<!--          Danger-->
+<!--        </div>-->
+        </div>
+        </div>
+  </nav>
+
+  <article>
+    <img src = "{% url 'video_stream' %}" width="450"
+     height="300"/>
+  </article>
+</section>
+
+</body>
+</html>
+
